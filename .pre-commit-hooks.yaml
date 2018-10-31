@@ -1,0 +1,5 @@
+-   id: ktlint-wrapper
+    name: ktlint wrapper
+    entry: ./ktlint-wrapper.sh
+    language: script
+    types: [kotlin]
