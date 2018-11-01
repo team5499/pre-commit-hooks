@@ -4,7 +4,7 @@ set -euo pipefail
 DOWNLOAD_URL="https://github.com/arturbosch/detekt/archive/RC9.2.tar.gz"
 CACHE_DIR=$(dirname "${BASH_SOURCE[0]}")
 
-if [ ! -f "$CACHE_DIR/detekt" ]; then
+if [ ! -f "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" ]; then
     if command -v curl > /dev/null; then
         curl -sSL -o "$CACHE_DIR/RC9.2.tar.gz" "$DOWNLOAD_URL"
     elif command -v wget > /dev/null; then
@@ -18,7 +18,6 @@ if [ ! -f "$CACHE_DIR/detekt" ]; then
     command cd "detekt-RC9.2"
     command ./gradlew build shadowJar
     command cd ..
-    command touch detekt
 fi
 
-command java -jar "detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" --debug -i "$@"
+command java -jar "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" --debug -i "$@"
