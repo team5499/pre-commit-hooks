@@ -3,7 +3,6 @@
     entry: ./ktlint-wrapper.sh
     language: script
     types: [kotlin]
-
 -   id: detekt-wrapper
     name: detekt wrapper
     entry: ./detekt-wrapper.sh
