@@ -21,4 +21,4 @@ if [ ! -f "$CACHE_DIR/detekt" ]; then
     command touch detekt
 fi
 
-command java -jar "detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar"
+command java -jar "detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" --debug -i "$@"
