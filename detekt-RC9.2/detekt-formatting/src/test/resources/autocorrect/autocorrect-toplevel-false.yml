@@ -1,8 +1,0 @@
-autoCorrect: false
-
-formatting:
-  active: true
-  autoCorrect: true
-  ChainWrapping:
-    active: true
-    autoCorrect: true
