@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+function join_by { local IFS="$1"; shift; echo "$*"; }
+
 DOWNLOAD_URL="https://github.com/arturbosch/detekt/archive/RC9.2.tar.gz"
 CACHE_DIR=$(dirname "${BASH_SOURCE[0]}")
 
@@ -18,4 +20,4 @@ if [ ! -f "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-
     command "$CACHE_DIR/detekt-RC9.2/gradlew" -q -p "$CACHE_DIR/detekt-RC9.2" shadowJar > /dev/null 2>&1
 fi
 
-java -jar "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" -i "$@"
+java -jar "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" -i $(join_by $@)
