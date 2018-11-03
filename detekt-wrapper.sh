@@ -13,7 +13,7 @@ if [ ! -f "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-
         >&2 echo "Please install curl or wget."
         exit 1
     fi
-    tar -zxf "$CACHE_DIR/RC9.2.tar.gz"
+    tar -zxf "$CACHE_DIR/RC9.2.tar.gz" -C "$CACHE_DIR"
     rm "$CACHE_DIR/RC9.2.tar.gz"
     command "$CACHE_DIR/detekt-RC9.2/gradlew" -q -p "$CACHE_DIR/detekt-RC9.2" shadowJar > /dev/null 2>&1
 fi
