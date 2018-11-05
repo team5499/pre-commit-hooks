@@ -19,7 +19,7 @@ if [ ! -f "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-
 fi
 
 INPUT_FILES=""
-EXTRA_ARGS=()
+EXTRA_ARGS=("")
 for arg in "$@"; do
     if [ -f "$arg" ]; then
         INPUT_FILES="$INPUT_FILES,$arg"
@@ -30,5 +30,4 @@ done
 
 INPUT_FILES="$(echo "$INPUT_FILES" | cut -c 2-)"
 
-set -x
 java -jar "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" ${EXTRA_ARGS[@]} -i "$INPUT_FILES"
