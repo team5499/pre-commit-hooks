@@ -16,4 +16,4 @@ if [ ! -f "$CACHE_DIR/ktlint" ]; then
     chmod a+x "$CACHE_DIR/ktlint"
 fi
 
-command "$CACHE_DIR/ktlint" --color --relative --verbose "$@"
+command "$CACHE_DIR/ktlint" "$@"

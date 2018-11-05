@@ -20,4 +20,4 @@ if [ ! -f "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-
     command "$CACHE_DIR/detekt-RC9.2/gradlew" -q -p "$CACHE_DIR/detekt-RC9.2" shadowJar > /dev/null 2>&1
 fi
 
-java -jar "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" -i $(join_by \; $@)
+java -jar "$CACHE_DIR/detekt-RC9.2/detekt-cli/build/libs/detekt-cli-1.0.0.RC9.2-all.jar" -i "$(join_by \; $@)"
