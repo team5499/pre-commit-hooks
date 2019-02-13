@@ -6,7 +6,7 @@ setup(
     name='team5499_hooks',
     description='team5499 specific kotlin precommit hooks',
     url='https://github.com/team5499/pre-commit-hooks',
-    version='0.3.9',
+    version='0.3.10',
 
     packages=find_packages(),
     package_data={'team5499_hooks': ['team5499_hooks/detekt-wrapper.bat',
