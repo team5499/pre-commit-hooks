@@ -14,7 +14,7 @@ def main(argv=[]):
     else:
         newArgs = ' '.join(argv)
         executable = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'detekt-wrapper.sh')
-        p = Popen(executable + ' ' + newArgs)
+        p = Popen('/bin/bash ' + executable + ' ' + newArgs)
         stdout, stderr = p.communicate()
         print(stdout)
         print()
