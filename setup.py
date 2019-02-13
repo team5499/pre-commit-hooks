@@ -9,6 +9,11 @@ setup(
     version='0.3.9',
 
     packages=find_packages(),
+    package_data={'team5499_hooks': ['team5499_hooks/detekt-wrapper.bat',
+                                        'team5499_hooks/detekt-wrapper.sh'
+                                        'team5499_hooks/ktlint-wrapper.bat'
+                                        'team5499_hooks/ktlint-wrapper.sh']},
+    include_package_data=True,
     extras_require={':python_version<"3.5"': ['typing']},
     entry_points={
         'console_scripts': [
