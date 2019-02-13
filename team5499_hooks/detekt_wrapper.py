@@ -1,7 +1,7 @@
 from os import sys
 from subprocess import Popen
 
-def main(argv=None):
+def main(argv=[]):
     if(sys.platform == "win32"):
         newArgs = ' '.join(argv)
         p = Popen('detekt-wrapper.bat ' + newArgs)
