@@ -2,6 +2,7 @@ from os import sys
 from subprocess import Popen
 
 def main(argv=[]):
+    print("0.3.11")
     if(sys.platform == "win32"):
         newArgs = ' '.join(argv)
         p = Popen('ktlint-wrapper.bat ' + newArgs)
