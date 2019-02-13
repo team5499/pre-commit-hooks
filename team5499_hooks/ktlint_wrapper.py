@@ -2,7 +2,7 @@ import os
 from subprocess import Popen
 
 def main(argv=[]):
-    print("0.3.12")
+    print("0.3.13")
     if(os.sys.platform == "win32"):
         newArgs = ' '.join(argv)
         executable = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'ktlint-wrapper.bat')
@@ -14,6 +14,7 @@ def main(argv=[]):
     else:
         newArgs = ' '.join(argv)
         executable = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'ktlint-wrapper.sh')
+        print(executable + ' ' + newArgs)
         p = Popen(executable + ' ' + newArgs)
         stdout, stderr = p.communicate()
         print(stdout)
