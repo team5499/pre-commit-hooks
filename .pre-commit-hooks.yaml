@@ -1,10 +1,10 @@
 -   id: ktlint-wrapper
     name: ktlint wrapper
-    entry: ktlint-wrapper
+    entry: ktlint_wrapper
     language: python
     types: [kotlin]
 -   id: detekt-wrapper
     name: detekt wrapper
-    entry: detekt-wrapper
+    entry: detekt_wrapper
     language: python
     types: [kotlin]
