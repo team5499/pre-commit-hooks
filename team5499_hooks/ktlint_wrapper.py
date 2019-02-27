@@ -8,9 +8,9 @@ except ImportError:
 DOWNLOAD_URL = "https://github.com/shyiko/ktlint/releases/download/0.29.0/ktlint"
 CACHE_DIR=os.path.dirname(os.path.abspath(__file__))
 
-if __name__ == '__main__':
+def main(argv=[]):
     print("0.3.15")
-    args = os.sys.argv[1:]
+    args = argv
     if(not os.path.exists(os.path.join(CACHE_DIR, "ktlint"))):
         print("downloading ktlint ...")
         urlretrieve(DOWNLOAD_URL, os.path.join(CACHE_DIR, "ktlint"))
@@ -28,5 +28,8 @@ if __name__ == '__main__':
         print(stdout)
         print(stderr)
         print('Finished')
-        os.sys.exit(p.returncode)
+    return p.returncode
+
+if __name__ == '__main__':
+    os.sys.exit(main(os.sys.argv[1:]))
     
