@@ -9,9 +9,8 @@ DOWNLOAD_URL = "https://github.com/arturbosch/detekt/releases/download/RC10/dete
 CACHE_DIR=os.path.dirname(os.path.abspath(__file__))
 
 def main(argv=[]):
-    print("0.3.20")
-    print(os.sys.argv)
-    args = argv
+    print("0.3.21")
+    args = os.sys.argv[1:]
     files = ''
     extras = []
     for i in args:
