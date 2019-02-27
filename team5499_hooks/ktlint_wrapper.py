@@ -9,7 +9,8 @@ DOWNLOAD_URL = "https://github.com/shyiko/ktlint/releases/download/0.29.0/ktlint
 CACHE_DIR=os.path.dirname(os.path.abspath(__file__))
 
 def main(argv=[]):
-    print("0.3.15")
+    print("0.3.17")
+    print(argv)
     args = argv
     if(not os.path.exists(os.path.join(CACHE_DIR, "ktlint"))):
         print("downloading ktlint ...")
