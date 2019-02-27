@@ -23,7 +23,6 @@ if __name__ == '__main__':
         print('Finished')
         os.sys.exit(p.returncode)
     else:
-        print("command")
         p = Popen('chmod a+x ' + os.path.join(CACHE_DIR, "ktlint") + ' && command ' + os.path.join(CACHE_DIR, "ktlint") + ' ' + ' '.join(args), shell=True)
         stdout, stderr = p.communicate()
         print(stdout)
