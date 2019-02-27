@@ -8,9 +8,9 @@ except ImportError:
 DOWNLOAD_URL = "https://github.com/arturbosch/detekt/releases/download/RC10/detekt-cli-1.0.0-RC10-all.jar"
 CACHE_DIR=os.path.dirname(os.path.abspath(__file__))
 
-if __name__ == '__main__':
+def main(argv=[]):
     print("0.3.15")
-    args = os.sys.argv[1:]
+    args = argv
     files = ''
     extras = []
     for i in args:
@@ -28,4 +28,7 @@ if __name__ == '__main__':
     print(stdout)
     print(stderr)
     print('Finished')
-    os.sys.exit(p.returncode)
+    return p.returncode
+
+if __name__ == '__main__':
+    os.sys.exit(main(os.sys.argv[1:]))
