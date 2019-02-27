@@ -10,8 +10,8 @@ CACHE_DIR=os.path.dirname(os.path.abspath(__file__))
 
 def main(argv=[]):
     print("0.3.17")
-    print(argv)
-    args = argv
+    print(os.sys.argv)
+    args = os.sys.argv[1:]
     files = ''
     extras = []
     for i in args:
