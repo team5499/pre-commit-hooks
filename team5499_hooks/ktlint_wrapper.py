@@ -16,7 +16,7 @@ if __name__ == '__main__':
         urlretrieve(DOWNLOAD_URL, os.path.join(CACHE_DIR, "ktlint"))
     
     if(os.sys.platform == "win32"):
-        p = Popen('C:\\Program Files\\Git\\bin\\sh.exe' + os.path.join(CACHE_DIR, "ktlint") + ' ' + ' '.join(args), shell=True)
+        p = Popen('\"C:\\Program Files\\Git\\bin\\sh.exe\" ' + os.path.join(CACHE_DIR, "ktlint") + ' ' + ' '.join(args), shell=True)
         stdout, stderr = p.communicate()
         print(stdout)
         print(stderr)
